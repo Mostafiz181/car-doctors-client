@@ -6,7 +6,7 @@ const Service = () => {
     const [service,setService]=useState([])
 
     useEffect(()=>{
-        fetch('services.json')
+        fetch('http://localhost:8000/services')
         .then(res=>res.json())
         .then(data=>setService(data))
     },[])
@@ -29,7 +29,7 @@ const Service = () => {
             }
            </div>
 
-           {/* <button className="btn btn-outline btn-primary ml-[550px] font-bold">See all service</button> */}
+           <button className="btn btn-outline btn-primary ml-[550px] font-bold">See all service</button>
 
         </div>
     );
